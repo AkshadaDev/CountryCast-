@@ -1,0 +1,241 @@
+/* Base styles */
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap');
+
+:root {
+    --primary-color: #2B6CB0;
+    --background-color: #F7FAFC;
+    --error-color: #E53E3E;
+    --success-color: #48BB78;
+    --warning-color: #ECC94B;
+    --text-color: #2D3748;
+    --gray-color: #718096;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Inter', sans-serif;
+    background-color: var(--background-color);
+    color: var(--text-color);
+    min-height: 100vh;
+    padding: 2rem;
+}
+
+.container {
+    max-width: 480px;
+    margin: 0 auto;
+    padding: 2rem;
+}
+
+/* Header */
+.app-title {
+    font-size: 2rem;
+    font-weight: 600;
+    color: var(--primary-color);
+    margin-bottom: 2rem;
+    text-align: center;
+}
+
+/* Search Form */
+.search-form {
+    display: flex;
+    gap: 1rem;
+    margin-bottom: 1.5rem;
+}
+
+.search-input {
+    flex: 1;
+    padding: 0.75rem 1rem;
+    border: 2px solid #E2E8F0;
+    border-radius: 0.5rem;
+    font-size: 1rem;
+    transition: all 0.3s ease;
+}
+
+.search-input:focus {
+    outline: none;
+    border-color: var(--primary-color);
+    box-shadow: 0 0 0 3px rgba(43, 108, 176, 0.1);
+}
+
+.search-button {
+    padding: 0.75rem 1.5rem;
+    background-color: var(--primary-color);
+    color: white;
+    border: none;
+    border-radius: 0.5rem;
+    font-weight: 500;
+    cursor: pointer;
+    transition: all 0.3s ease;
+}
+
+.search-button:hover {
+    background-color: #2457A0;
+    transform: translateY(-1px);
+}
+
+.search-button:active {
+    transform: translateY(0);
+}
+
+/* Loading Spinner */
+.loading {
+    width: 30px;
+    height: 30px;
+    border: 3px solid #E2E8F0;
+    border-radius: 50%;
+    border-top-color: var(--primary-color);
+    margin: 1rem auto;
+    animation: spin 1s linear infinite;
+    display: none;
+}
+
+@keyframes spin {
+    to { transform: rotate(360deg); }
+}
+
+/* Error Banner */
+.error-banner {
+    background-color: var(--error-color);
+    color: white;
+    padding: 1rem;
+    border-radius: 0.5rem;
+    margin-bottom: 1rem;
+    display: none;
+}
+
+/* Weather Card */
+.weather-card {
+    background: white;
+    border-radius: 1rem;
+    padding: 2rem;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    display: none;
+    animation: fadeIn 0.3s ease-in;
+}
+
+@keyframes fadeIn {
+    from { opacity: 0; transform: translateY(10px); }
+    to { opacity: 1; transform: translateY(0); }
+}
+
+.weather-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 1.5rem;
+}
+
+.location-name {
+    font-size: 1.5rem;
+    font-weight: 600;
+    color: var(--text-color);
+}
+
+.unit-toggle {
+    padding: 0.5rem 1rem;
+    background: none;
+    border: 2px solid var(--primary-color);
+    color: var(--primary-color);
+    border-radius: 0.5rem;
+    font-weight: 500;
+    cursor: pointer;
+    transition: all 0.3s ease;
+}
+
+.unit-toggle:hover {
+    background-color: var(--primary-color);
+    color: white;
+}
+
+.weather-main {
+    display: flex;
+    align-items: center;
+    gap: 1.5rem;
+    margin-bottom: 2rem;
+    padding: 1rem;
+    background-color: var(--background-color);
+    border-radius: 0.75rem;
+}
+
+.weather-icon {
+    width: 64px;
+    height: 64px;
+    object-fit: contain;
+}
+
+.temperature {
+    font-size: 2.5rem;
+    font-weight: 700;
+    color: var(--text-color);
+}
+
+.condition {
+    color: var(--gray-color);
+    font-size: 1.1rem;
+}
+
+.weather-details {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 1.5rem;
+    margin-bottom: 1.5rem;
+    padding: 1rem;
+    background-color: var(--background-color);
+    border-radius: 0.75rem;
+}
+
+.detail-item {
+    text-align: center;
+}
+
+.detail-label {
+    color: var(--gray-color);
+    font-size: 0.875rem;
+    margin-bottom: 0.5rem;
+}
+
+.detail-value {
+    font-weight: 600;
+    color: var(--text-color);
+}
+
+.air-quality-section {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 1rem;
+    background-color: var(--background-color);
+    border-radius: 0.75rem;
+}
+
+.air-quality-label {
+    font-size: 0.875rem;
+    color: var(--gray-color);
+}
+
+.air-quality-badge {
+    padding: 0.5rem 1rem;
+    border-radius: 1rem;
+    font-weight: 500;
+    font-size: 0.875rem;
+}
+
+.air-quality-good {
+    background-color: var(--success-color);
+    color: white;
+}
+
+.air-quality-moderate {
+    background-color: var(--warning-color);
+    color: var(--text-color);
+}
+
+.air-quality-unhealthy {
+    background-color: var(--error-color);
+    color: white;
+} 
