@@ -26,7 +26,7 @@ CountryCast is a web application that provides weather information for any count
 
 1. **Clone the Repository**:
    ```bash
-   git clone https://github.com/your-username/CountryCast.git
+   git clone https://github.com/AkshadaDev/CountryCast-.git
    ```
    ```bash
    cd CountryCast
