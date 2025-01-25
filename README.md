@@ -3,6 +3,13 @@
 CountryCast is a web application that provides weather information for any country using a weather API. Built with **HTML**, **CSS**, **JavaScript**, and **Python Flask**.
 
 ---
+## 📸 Snapshot
+
+ ![duplicatet](https://github.com/user-attachments/assets/4bd154be-9c19-48de-a28a-17b73d833062)
+
+ ---
+
+ 
 
 ## Features ✨
 - Fetch real-time weather data for any country.
@@ -33,15 +40,15 @@ CountryCast is a web application that provides weather information for any count
    ```
    ---
    
-2.**Install dependencies**:
-  ```bash
-  pip install -r requirements.txt
-  ```
+ 2. **Install dependencies**:
+    ```bash
+    pip install -r requirements.txt
+    ```
 ---
-3.**Run the Flask App**:
-  ```bash
-  python app.py
-```
+ 3. **Run the Flask App**:
+    ```bash
+    python app.py
+   ```
 ---
  ## 📱 Contact
 
