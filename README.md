@@ -48,7 +48,7 @@ CountryCast is a web application that provides weather information for any count
  3. **Run the Flask App**:
     ```bash
     python app.py
-   ```
+    ```
 ---
  ## 📱 Contact
 
