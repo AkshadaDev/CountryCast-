@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Weather App</title>
+    <link rel="stylesheet" href="/static/css/style.css">
+</head>
+<body>
+    <div class="container">
+        <h1 class="app-title">CountryCast</h1>
+        
+        <!-- Search Form -->
+        <div class="search-form">
+            <input type="text" id="location" class="search-input" 
+                   placeholder="Enter city name (e.g., London, Tokyo, New York)">
+            <button class="search-button">Search</button>
+        </div>
+
+        <!-- Error Banner -->
+        <div id="error" class="error-banner"></div>
+
+        <!-- Loading Spinner -->
+        <div id="loading" class="loading"></div>
+
+        <!-- Weather Card -->
+        <div id="weatherCard" class="weather-card">
+            <div class="weather-header">
+                <h2 id="locationName" class="location-name"></h2>
+                <button class="unit-toggle">°C / °F</button>
+            </div>
+
+            <div class="weather-main">
+                <img id="weatherIcon" class="weather-icon" alt="Weather Icon">
+                <div>
+                    <div class="temperature">
+                        <span id="temperature"></span>
+                        <span id="unit">°C</span>
+                    </div>
+                    <div id="condition" class="condition"></div>
+                </div>
+            </div>
+
+            <div class="weather-details">
+                <div class="detail-item">
+                    <div class="detail-label">Humidity</div>
+                    <div id="humidity" class="detail-value"></div>
+                </div>
+                <div class="detail-item">
+                    <div class="detail-label">Wind Speed</div>
+                    <div id="windSpeed" class="detail-value"></div>
+                </div>
+                <div class="detail-item">
+                    <div class="detail-label">Feels Like</div>
+                    <div id="feelsLike" class="detail-value"></div>
+                </div>
+            </div>
+            <h5> Made with - by Akshada Devkar</h5>
+
+            <div class="air-quality-section">
+                <div class="air-quality-label">Air Quality</div>
+                <div id="airQuality" class="air-quality-badge"></div>
+            </div>
+        </div>
+    </div>
+
+    <script src="/static/js/app.js"></script>
+</body>
+</html> 
